@@ -20,12 +20,12 @@ import full05 from '../assets/images/fulls/05.jpg'
 import full06 from '../assets/images/fulls/06.jpg'
 
 const DEFAULT_IMAGES = [
-    { id: '1', src: full01, thumbnail: thumb01, caption: 'Photo 1', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '2', src: full02, thumbnail: thumb02, caption: 'Photo 2', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '3', src: full03, thumbnail: thumb03, caption: 'Photo 3', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '4', src: full04, thumbnail: thumb04, caption: 'Photo 4', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '5', src: full05, thumbnail: thumb05, caption: 'Photo 5', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '6', src: full06, thumbnail: thumb06, caption: 'Photo 6', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'}
+    { id: '1', src: full01, thumbnail: thumb01, caption: '1', description: '1'},
+    { id: '2', src: full02, thumbnail: thumb02, caption: '2', description: '2'},
+    { id: '3', src: full03, thumbnail: thumb03, caption: '3', description: '3'},
+    { id: '4', src: full04, thumbnail: thumb04, caption: '4', description: '4'},
+    { id: '5', src: full05, thumbnail: thumb05, caption: '5', description: '5'},
+    { id: '6', src: full06, thumbnail: thumb06, caption: '6', description: '6'}
 ];
 
 class HomeIndex extends React.Component {
@@ -75,8 +75,8 @@ class HomeIndex extends React.Component {
     }
 
     render() {
-        const siteTitle = "Gatsby Starter - Strata"
-        const siteDescription = "Site description"
+        const siteTitle = "Ciro Gallo - Pittore "
+        const siteDescription = "Il sito web personale di Ciro Gallo"
 
         return (
             <Layout>
@@ -89,17 +89,38 @@ class HomeIndex extends React.Component {
 
                     <section id="one">
                         <header className="major">
-                            <h2>Ipsum lorem dolor aliquam ante commodo<br />
-                            magna sed accumsan arcu neque.</h2>
+                            <h2>Biografia</h2>
                         </header>
-                        <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-                        <ul className="actions">
-                            <li><a href="#" className="button">Learn More</a></li>
-                        </ul>
+                        <p>Nato a Trieste nel 1938.</p>
+                        <p>
+                            Autodidatta. Si è formato nell'ambiente teatrale dove è stato per lunghi anni in contatto con vari scenografi (S. D'Osmo, L. Damiani, E. Luzzati, J. Svoboda)
+                            e registi (O. Costa, F. Crivelli, F. Enriquez, G. Menotti, G. Pressburger, V. Puecher, A. Trionfo, F. Tolusso) operanti nel teatro di prosa e lirico a Trieste. 
+                        </p><p>
+                            Dal mondo teatrale assorbiva il senso della creatività ma anche la disciplina costruttivista alimentando la sua naturale vocazione pittorica. 
+                            Le sue prove iniziali appaiono in mostre collettive regionali nel 1982 mentre nell'anno successivo è la prima personale. 
+                            Da allora ha allestito alcune personali a Trieste ed è stato presente in varie collettive in Italia, a New York, a Kranj in Slovenia, Graz in Austria.
+                        </p>
                     </section>
 
                     <section id="two">
-                        <h2>Recent Work</h2>
+                        <h3 className='no-margin'>Secondo Maria Campitelli</h3>
+                        <sub>
+                            Ciro Gallo, Trieste, 1995; C.H. Martelli<br/>
+                            Dizionario degli artisti di Trieste, dell'Isontino, dell'Istria e della Dalmazia, Hammerle Editori, Trieste 1996.
+                        </sub>
+                        <p></p>
+                        <p>
+                            Artista capace di "ridurre l'empito dei sentimenti e la volontà cognitiva attraverso rarefatti elementi visivi"
+                            in una consumata manipolazione di elementi concreti al fine di inventare un linguaggio consono alla narrazione dell'indagine fantastica. 
+                        </p>
+                        <p>
+                            Un'equilibrata concezione dello spazio, l'uso del colore in funzione catalizzante, l'innesto materico attraverso il collage, la trasposizione di testi, 
+                            sono caratterizzanti dell'equilibrio raggiunto da questo artista dotato di originalità ed autonomia espressiva sempre alla ricerca di nuovi elementi di comunicazione.
+                        </p>
+                    </section>
+
+                    <section id="three">
+                        <h2>Alcuni dei miei lavori</h2>
 
                         <Gallery images={DEFAULT_IMAGES.map(({ id, src, thumbnail, caption, description }) => ({
                             src,
@@ -113,16 +134,16 @@ class HomeIndex extends React.Component {
                         </ul>
                     </section>
 
-                    <section id="three">
-                        <h2>Get In Touch</h2>
-                        <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+                    <section id="four">
+                        <h2>Contatti</h2>
+                        <p></p>
                         <div className="row">
                             <div className="8u 12u$(small)">
                                 <form method="post" action="#">
                                     <div className="row uniform 50%">
-                                        <div className="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
+                                        <div className="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Nome" /></div>
                                         <div className="6u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-                                        <div className="12u"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+                                        <div className="12u"><textarea name="message" id="message" placeholder="Messaggio" rows="4"></textarea></div>
                                     </div>
                                 </form>
                                 <ul className="actions">
@@ -133,17 +154,16 @@ class HomeIndex extends React.Component {
                                 <ul className="labeled-icons">
                                     <li>
                                         <h3 className="icon fa-home"><span className="label">Address</span></h3>
-                                        1234 Somewhere Rd.<br />
-                                        Nashville, TN 00000<br />
-                                        United States
+                                        Trieste<br />
+                                        Italia                                    
                                     </li>
                                     <li>
-                                        <h3 className="icon fa-mobile"><span className="label">Phone</span></h3>
-                                        000-000-0000
+                                        <h3 className="icon fa-mobile"><span className="label">Telefono</span></h3>
+                                        +39 338 422 9001
                                     </li>
                                     <li>
                                         <h3 className="icon fa-envelope-o"><span className="label">Email</span></h3>
-                                        <a href="#">hello@untitled.tld</a>
+                                        <a href="#">ciro.gallo.ts@gmail.com</a>
                                     </li>
                                 </ul>
                             </div>
