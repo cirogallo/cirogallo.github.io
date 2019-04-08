@@ -26,20 +26,20 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-d14cf861f832e6cab548.js"
+    "url": "webpack-runtime-e1eb7509668f5030f2fb.js"
   },
   {
-    "url": "app-b013c22003b02c67b9ef.js"
+    "url": "app-011b8cb8fb94f009204f.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-eaba00595f438983b7e7.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "a35fa45a4cf7c8865130668957b4f080"
+    "revision": "6898aa528e92b6b640ed11b120bde8c7"
   },
   {
-    "url": "styles.4e3500e6c4d3c48a1370.css"
+    "url": "styles.99e07c05105e18a1ef64.css"
   },
   {
     "url": "styles-2a510148684edb4aa138.js"
@@ -76,7 +76,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/cirogallo.it/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -148,7 +148,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `/cirogallo.it${pathname}`
+        return `${pathname}`
       } else {
         return pathname
       }
